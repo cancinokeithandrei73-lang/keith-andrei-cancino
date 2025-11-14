@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - CS Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">CS Hub</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services & Perks</a></li>
+      <li><a href="career-paths.html">Career Paths</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h1>Contact Us</h1>
+  <p>Have questions or want to collaborate? Send us a message!</p>
+
+  <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" rows="6" required></textarea>
+
+    <button type="submit" class="btn-card">Send Message</button>
+  </form>
+
+  <div id="formMessage" class="form-message"></div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault(); // Prevent page reload
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/your-form-id', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      if (response.ok) {
+        formMessage.textContent = "Thank you! Your message has been sent.";
+        formMessage.style.color = "#00ffea";
+        form.reset();
+      } else {
+        const data = await response.json();
+        formMessage.textContent = data.errors ? data.errors.map(e => e.message).join(", ") : "Oops! Something went wrong.";
+        formMessage.style.color = "red";
+      }
+    } catch (error) {
+      formMessage.textContent = "Error sending message. Please try again later.";
+      formMessage.style.color = "red";
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+    background-color: #121212;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header & Nav */
+header {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a:hover {
+    color: #00ffea;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 20px 0 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 30px;
+    background-color: #00ffea;
+    color: #121212;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ffea;
+}
+
+.cards, .perks-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+ul li {
+    margin: 10px 0;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ffea;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00e0d0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #aaa;
+}
+.btn-card {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00ffea;
+    color: #121212;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-card:hover {
+    background-color: #00e0d0;
+}
+.contact-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #121212;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.contact-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section label {
+    margin: 10px 0 5px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.contact-section button {
+    background-color: #00ffea;
+    color: #121212;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #00e0d0;
+}
+.form-message {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1em;
+}
+.career-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.career-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.career-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.career-list .card {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+.career-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.career-list .card {
+    background-color: #121212;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.career-list .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.career-list .card h3 {
+    margin: 10px 0;
+}
+
+.career-list .card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.btn-card {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ffea;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-card:hover {
+    background-color: #00e0d0;
+}
